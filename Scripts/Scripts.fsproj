@@ -5,7 +5,7 @@
     <WarnOn>3390;$(WarnOn)</WarnOn>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="LogSystem.fs" />
+    <Compile Include="LoggersSystem.fs" />
     <Compile Include="HelloWorldInitializeSystem.fs" />
     <Compile Include="GameController.fs" />
   </ItemGroup>
