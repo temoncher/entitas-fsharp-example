@@ -39,3 +39,8 @@ fastlane/report.xml
 
 # Project
 Build
+
+# FSharp stuff
+**/Assets/Scripts.*
+**/Assets/Sources/Generated/**
+**/Assets/Sources/Generated.meta
