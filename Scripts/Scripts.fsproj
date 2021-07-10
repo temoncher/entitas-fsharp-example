@@ -1,21 +1,18 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <WarnOn>3390;$(WarnOn)</WarnOn>
   </PropertyGroup>
-
   <ItemGroup>
+    <Compile Include="LogSystem.fs" />
     <Compile Include="HelloWorldInitializeSystem.fs" />
     <Compile Include="GameController.fs" />
   </ItemGroup>
-
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\Library\ScriptAssemblies\Assembly-CSharp.dll</HintPath>
     </Reference>
-
     <Reference Include="Entitas">
       <HintPath>..\Assets\Libs\Entitas\Entitas.dll</HintPath>
     </Reference>
@@ -28,7 +25,6 @@
     <Reference Include="Entitas.VisualDebugging.Unity">
       <HintPath>..\Assets\Libs\Entitas\Entitas.VisualDebugging.Unity.dll</HintPath>
     </Reference>
-
     <Reference Include="Unity.Cecil">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.13f1\Editor\Data\Managed\UnityEngine\Unity.Cecil.dll</HintPath>
     </Reference>
@@ -261,10 +257,8 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.13f1\Editor\Data\Managed\UnityEngine\UnityEngine.XRModule.dll</HintPath>
     </Reference>
   </ItemGroup>
-
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="copy /y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)\..\Assets\&quot;" />
     <Exec Command="copy /y &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;$(ProjectDir)\..\Assets\&quot;" />
   </Target>
-
 </Project>
